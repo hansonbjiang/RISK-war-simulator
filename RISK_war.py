@@ -23,6 +23,9 @@ def find_winner(offense, defense):
     return 'defense'
 
 def war(offense, defense):
+    '''war(offense, defense) -> None
+    prints the troops left after a war in RISK in formatted as
+    (offense, defense).'''
     while offense > 0 and defense > 0:
         winner = find_winner(offense, defense)
         if winner == 'offense':
@@ -31,6 +34,3 @@ def war(offense, defense):
             offense = offense - 1
 
     print(offense, defense)
-
-
-            
